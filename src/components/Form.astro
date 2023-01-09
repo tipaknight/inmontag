@@ -10,7 +10,13 @@ import Button from "./Button.astro";
         Оставьте ваши контактные данные и напишите сообщение
       </p>
       <div class="form-wrapper__inner">
-        <form method="POST" id="form-1" name="contact" data-netlify="true">
+        <form
+          method="POST"
+          id="form-1"
+          name="contact"
+          data-netlify-recaptcha="true"
+          data-netlify="true"
+        >
           <input type="hidden" name="form-name" value="contact" />
           <input type="hidden" name="subject" value="Письмо из  instamontag" />
           <div class="text-form">
