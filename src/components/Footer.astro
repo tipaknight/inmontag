@@ -1,11 +1,20 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
-      <div><p>© Copyright 2023 / instamontag.tk</p></div>
+      <div>
+        <p>
+          © Copyright <span id="copyright"></span> | instamontag.netlify.app
+        </p>
+      </div>
       <div><img src="/img/instagram.svg" width="50" alt="insta" /></div>
     </div>
   </div>
 </footer>
+<script>
+  document.querySelector("#copyright").textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>
 <style lang="scss">
   .footer {
     background: linear-gradient(var(--white), var(--danube));
