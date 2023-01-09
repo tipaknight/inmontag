@@ -1,0 +1,50 @@
+---
+import "../styles/_hero.scss";
+import { Image } from "@astrojs/image/components";
+import Img1 from "../images/st2_01.jpg";
+import Img2 from "../images/st2_02.png";
+import Img3 from "../images/st2_03.png";
+import Img4 from "../images/st2_04.png";
+import Img5 from "../images/st2_05.png";
+import Img6 from "../images/st2_06.jpg";
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>INSTAMONTAG</h1>
+    <p class="hero__content">
+      Фото и видеомонтаж в соцсетях (Instagram, Facebook, Yotube, VK и др.) для
+      постов и сторис. Создание инсталендингов и бесконечных лент.
+    </p>
+    <div class="hero-grid">
+      <a href="#stories"
+        ><div class="hero-grid__item">
+          <Image class="hero-img" src={Img1} width={345} alt="фото 1" />
+          <h2 class="hero-grid__item--text">STORIES</h2>
+        </div>
+      </a>
+      <div class="hero-grid__item">
+        <Image class="hero-img" src={Img2} width={345} alt="фото 2" />
+      </div>
+      <a href="#photo"
+        ><div class="hero-grid__item">
+          <Image class="hero-img" src={Img3} width={345} alt="фото 3" />
+          <h2 class="hero-grid__item--text">Видеопост</h2>
+        </div>
+      </a>
+      <div class="hero-grid__item">
+        <Image class="hero-img" src={Img4} width={345} alt="фото 4" />
+      </div>
+      <a href="#lenta"
+        ><div class="hero-grid__item">
+          <Image class="hero-img" src={Img5} width={345} alt="фото 5" />
+          <h2 class="hero-grid__item--text">Бесконечная лента</h2>
+        </div>
+      </a>
+      <div class="hero-grid__item">
+        <Image class="hero-img" src={Img6} width={345} alt="фото 6" />
+      </div>
+    </div>
+  </div>
+</section>
+<style lang="scss"></style>

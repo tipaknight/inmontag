@@ -1,0 +1,88 @@
+---
+import IconPrice from "./icon/IconPrice.astro";
+import IconLenta from "./icon/IconLenta.astro";
+import IconPhoto from "./icon/IconPhoto.astro";
+---
+
+<section class="price">
+  <div class="container">
+    <h2 class="price__h2">Цена</h2>
+    <div class="wrapper-price">
+      <div class="wrapper-price__item" id="stories">
+        <span>
+          <IconPrice />
+        </span>
+        <p class="wrapper-price__item--title">Видео от 300 руб/15 сек.</p>
+        <p>
+          Создание роликов из фото и видеоматериалов требуемого формата.
+          Аннимация, видеоэффекты. Наложение текстов, аудиоряда.
+        </p>
+      </div>
+      <div class="wrapper-price__item" id="lenta">
+        <span>
+          <IconLenta />
+        </span>
+        <p class="wrapper-price__item--title">
+          Инсталендинг и бесконечная лента от 500 руб.
+        </p>
+
+        <ul>
+          <li>Блок из 3 постов - 500 руб.</li>
+          <li>6 постов - 800 руб.</li>
+          <li>9 постов - 1000 руб</li>
+          <li>12 постов - 1300 руб.</li>
+        </ul>
+      </div>
+      <div class="wrapper-price__item" id="photo">
+        <span>
+          <IconPhoto />
+        </span>
+        <p class="wrapper-price__item--title">Фото от 150 руб/шт.</p>
+        <p>
+          Фотомонтаж. Ретушь. Удаление и смена фона. Цветокоррекция, "чистка" и
+          выравнивание дефектов, артефактов.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<style lang="scss">
+  .price {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+    &__h2 {
+      text-align: center;
+    }
+  }
+  .wrapper-price {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: top;
+    gap: 40px 30px;
+    padding-top: 40px;
+
+    &__item {
+      width: 300px;
+      height: 400px;
+      text-align: center;
+      padding: 30px 20px 20px;
+      border: 2px solid var(--danube);
+      border-radius: 0 30px;
+
+      &--title {
+        font-size: 1.6rem;
+        color: var(--danube);
+        padding: 10px 0;
+        line-height: 1.2;
+      }
+    }
+  }
+  li {
+    line-height: 1.4;
+    font-size: 1.25rem;
+    color: var(--kashmir);
+  }
+</style>

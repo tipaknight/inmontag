@@ -1,0 +1,103 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="form">
+  <div class="container">
+    <div class="form-wrapper">
+      <h3>Как сделать заказ или задать вопрос?</h3>
+      <p class="form-wrapper__content">
+        Оставьте ваши контактные данные и напишите сообщение
+      </p>
+      <div class="form-wrapper__inner">
+        <form method="POST" id="form-1" name="contact" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="subject" value="Письмо из  instamontag" />
+          <div class="text-form">
+            <label for="name">Имя</label>
+          </div>
+          <div>
+            <input
+              class="form-item"
+              type="text"
+              placeholder="Ваше имя"
+              name="name"
+              required
+            />
+          </div>
+          <div class="text-form">
+            <label for="phone">Ваш телефон</label>
+          </div>
+          <div>
+            <input
+              class="form-item mask-tel"
+              type="tel"
+              placeholder="Введите номер телефона"
+              name="phone"
+            />
+          </div>
+          <div class="text-form">
+            <label for="question-fq">Сообщение</label>
+          </div>
+          <div class="form-item">
+            <textarea
+              placeholder="Ваш вопрос"
+              name="message"
+              required
+              rows="4"
+              cols="32"></textarea>
+          </div>
+          <div class="btn-form">
+            <Button tape="submit">Отправить</Button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  import "../script/mask-tel.js";
+</script>
+<style lang="scss">
+  .form {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+    border: 2px solid var(--danube);
+    border-radius: 18px;
+    padding: 30px;
+    &__content {
+      padding: 15px 0 30px;
+    }
+    &__inner {
+      min-width: 280px;
+    }
+  }
+  .text-form {
+    padding: 5px 0;
+    color: var(--kashmir);
+  }
+  .form-item {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--danube);
+    font-size: 14px;
+    textarea {
+      font-size: 14px;
+    }
+  }
+  .btn-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+</style>
