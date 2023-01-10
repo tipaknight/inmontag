@@ -2,16 +2,16 @@
 import { Image } from "@astrojs/image/components";
 import aboutImg1 from "../images/3_insta.jpg";
 import aboutImg2 from "../images/4_insta.jpg";
+import * as AboOut from "../content/about.md";
 ---
 
 <section class="about">
   <div class="container">
     <div class="wrapper-about">
       <div class="wrapper-about__item-1">
-        <h3>Бесконечная лента & инсталендинг</h3>
+        <h3>{AboOut.frontmatter.title_1}</h3>
         <p class="wrapper-about__item-1--text">
-          Подбор цветовой гаммы, коррекция, монтаж фото/видео материалов
-          согласно вашего контент-плана.
+          {AboOut.frontmatter.title_1_text}
         </p>
         <Image
           class="wrapper-about__item-1--img"
@@ -27,9 +27,11 @@ import aboutImg2 from "../images/4_insta.jpg";
           width={500}
           alt="img2"
         />
-        <h3 class="wrapper-about__item-2--title">Монтаж фото</h3>
+        <h3 class="wrapper-about__item-2--title">
+          {AboOut.frontmatter.title_2}
+        </h3>
         <p class="wrapper-about__item-2--text">
-          Преобразование ваших фото в запоминающиеся стильные изображения.
+          {AboOut.frontmatter.title_2_text}
         </p>
       </div>
     </div>

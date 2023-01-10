@@ -2,20 +2,22 @@
 import IconPrice from "./icon/IconPrice.astro";
 import IconLenta from "./icon/IconLenta.astro";
 import IconPhoto from "./icon/IconPhoto.astro";
+import * as PriceCont from "../content/price-content.md";
 ---
 
 <section class="price">
   <div class="container">
-    <h2 class="price__h2">Цена</h2>
+    <h2 class="price__h2">{PriceCont.frontmatter.title}</h2>
     <div class="wrapper-price">
       <div class="wrapper-price__item" id="stories">
         <span>
           <IconPrice />
         </span>
-        <p class="wrapper-price__item--title">Видео от 300 руб/15 сек.</p>
+        <p class="wrapper-price__item--title">
+          {PriceCont.frontmatter.card1}
+        </p>
         <p>
-          Создание роликов из фото и видеоматериалов требуемого формата.
-          Аннимация, видеоэффекты. Наложение текстов, аудиоряда.
+          {PriceCont.frontmatter.text1}
         </p>
       </div>
       <div class="wrapper-price__item" id="lenta">
@@ -23,24 +25,23 @@ import IconPhoto from "./icon/IconPhoto.astro";
           <IconLenta />
         </span>
         <p class="wrapper-price__item--title">
-          Инсталендинг и бесконечная лента от 500 руб.
+          {PriceCont.frontmatter.card2}
         </p>
 
         <ul>
-          <li>Блок из 3 постов - 500 руб.</li>
-          <li>6 постов - 800 руб.</li>
-          <li>9 постов - 1000 руб</li>
-          <li>12 постов - 1300 руб.</li>
+          <li>{PriceCont.frontmatter.text2_item1}</li>
+          <li>{PriceCont.frontmatter.text2_item2}</li>
+          <li>{PriceCont.frontmatter.text2_item3}</li>
+          <li>{PriceCont.frontmatter.text2_item4}</li>
         </ul>
       </div>
       <div class="wrapper-price__item" id="photo">
         <span>
           <IconPhoto />
         </span>
-        <p class="wrapper-price__item--title">Фото от 150 руб/шт.</p>
+        <p class="wrapper-price__item--title">{PriceCont.frontmatter.card3}</p>
         <p>
-          Фотомонтаж. Ретушь. Удаление и смена фона. Цветокоррекция, "чистка" и
-          выравнивание дефектов, артефактов.
+          {PriceCont.frontmatter.text3}
         </p>
       </div>
     </div>

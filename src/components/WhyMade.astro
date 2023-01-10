@@ -2,16 +2,16 @@
 import { Image } from "@astrojs/image/components";
 import whyImg from "../images/5_insta.jpg";
 import WhyVideo from "./WhyVideo.astro";
+import * as AboOut from "../content/about.md";
 ---
 
 <section class="why-made">
   <div class="container">
     <div class="wrapper-why">
       <div class="wrapper-why__item">
-        <h2>Как сделать инстаграм лучше?</h2>
+        <h2>{AboOut.frontmatter.title}</h2>
         <p class="wrapper-why__item--text">
-          Просмотрите свои архивные фото, видеоматериалы, подберите подходящие
-          по тематике. Закажите обработку из предлагаемых вариантов.
+          {AboOut.frontmatter.title_text}
         </p>
         <WhyVideo />
       </div>
